@@ -1,0 +1,35 @@
+{
+    "env": {
+        "browser": true,
+        "node": true
+    },
+    "extends": ["plugin:react/recommended", "standard", "prettier"],
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 12,
+        "sourceType": "module"
+    },
+    "plugins": ["react"],
+    "rules": {
+        "react/display-name": "off",
+        "react/react-in-jsx-scope": "off"
+    },
+    "settings": {
+        "react": {
+            "version": "detect"
+        }
+    },
+    "overrides": [
+        {
+            "files": [
+              "**/*.test.js",
+              "**/*.test.jsx"
+            ],
+            "env": {
+              "jest": true
+            }
+          }
+    ]
+}

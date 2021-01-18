@@ -1,0 +1,25 @@
+.App {
+    &-header {
+        &-logo {
+            max-width: 80px;
+        }
+    }
+    &-content {
+        padding: 1rem 4rem;
+        h3 {
+            color: var(--primary-color);
+        }
+        p {
+            color: var(--secondary-color);
+        }
+        .bye-bye {
+            margin: 4rem 0 0;
+            text-align: center;
+            background: var(--terciary-color);
+            border: 1px solid #ddd;
+            color: #ababab;
+            padding: 1rem;
+            border-radius: 4px;
+        }
+    }
+}

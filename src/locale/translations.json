@@ -1,0 +1,90 @@
+{
+    "es": {
+        "translation": {
+            "stepOne": {
+                "title": "Crea tu Password Manager paso 1",
+                "paragraph1": "Guarda aguí todas tus contraseñas, datos o cualquier información, olvida las notas de papel y las aplicaciones no protegidas.",
+                "paragraph2": "Crea tu clave maestra: solo tú podrás acceder a tus secretos con ella.",
+                "title2": "Cómo funciona",
+                "paragraph3": "En primer lugar, debes crear un contraseña diferente para sus pertenencias electrónicas. No podrás recuperar tu contraseña, así que recuérdala bien.",
+                "title3": "Qué datos puedes guardar",
+                "paragraph4": "Por ejemplo, el número de tarjeta, el PIN y el PUK de tu teléfono móvil, el número de serie de alguno de tusdispositivos o cualquier información que neesitas tener en lugar seguro.",
+                "confirmation": "Soy mayor de edad y acepto la LOPD"
+            },
+            "stepTwo": {
+                "title": "Crea tu Password Manager paso 2",
+                "paragraph1": "En primer lugar, debes crear una contraseña diferente para sus pertenencias electrónicas.",
+                "paragraph2": "No podrás recuperar tu contraseña, así que  recuérdala bien.",
+                "label1": "Crea tu contraseña Maestra",
+                "minLength": "Mínimo 8 caracteres",
+                "maxLength": "Máximo 24 caracteres",
+                "pattern": "Al menos 1 número y una mayúscula",
+                "required": "Campo obligatorio",
+                "match": "Las contraseñas no coinciden",
+                "password": "Introduce tu contraseña",
+                "repeatPassword": "Repite tu contraseña",
+                "paragraph3": "También puedes crear una pista que te ayude a recordar tu contraseña maestra.",
+                "label2": "Crea tu pista para recordar tu contraseña (opcional)",
+                "track": "Introduce tu pista",
+                "max255": "Máximo 255 caracteres"
+            },
+            "stepThree": {
+                "title": "Crea tu Password Manager paso 3",
+                "buttonText1": "Acceder",
+                "buttonText2": "Voler a Password Manager",
+                "successTitle": "¡Tu Password Manager ya está creado!",
+                "successMessage": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas varius tortor nibh.",
+                "failureTitle": "Ha habido un error",
+                "failureMessage": "No hemos podido modificar tu Contraseña Maestra. Inténtalo más tarde."
+            },
+            "buttons": {
+                "cancel": "Cancelar",
+                "next": "Siguiente"
+            }
+        }
+    },
+    "en": {
+        "translation": {
+            "stepOne": {
+                "title": "Create your Password Manager step 1",
+                "paragraph1": "Save here all your passwords, data or any information, forget paper notes and unprotected applications.",
+                "paragraph2": "Create your master password: only you can access your secrets with it.",
+                "title2": "How it works",
+                "paragraph3": "First of all, you must create a different password for your electronic belongings. You will not be able to recover your password, so remember it well.",
+                "title3": "What data can you save",
+                "paragraph4": "For example, the card number, the PIN and the PUK of your mobile phone, the serial number of one of your devices or any information that you need to have in a safe place.",
+                "confirmation": "I am of legal age and I accept the LOPD"
+            },
+            "stepTwo": {
+                "title": "Create your Password Manager step 2",
+                "paragraph1": "First, you must create a different password for your electronic belongings.",
+                "paragraph2": "You will not be able to recover your password, so remember it well.",
+                "label1": "Create your Master password",
+                "minLength": "Minimum 8 characters",
+                "maxLength": "Maximum 24 characters",
+                "pattern": "At least 1 number and one uppercase",
+                "required": "Required field",
+                "match": "Passwords do not match",
+                "password": "Enter your password",
+                "repeatPassword": "Repeat your password",
+                "paragraph3": "You can also create a hint to help you remember your master password.",
+                "label2": "Create your hint to remember your password (optional)",
+                "track": "Enter your track",
+                "max255": "Maximum 255 characters"
+            },
+            "stepThree": {
+                "title": "Create your Password Manager step 3",
+                "buttonText1": "Access",
+                "buttonText2": "Go back to Password Manager",
+                "successTitle": "Your Password Manager is already created!",
+                "successMessage": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas varius tortor nibh.",
+                "failureTitle": "There was an error",
+                "failureMessage": "We were unable to modify your Master Password. Please try again later."
+            },
+            "buttons": {
+                "cancel": "Cancel",
+                "next": "Next"
+            }
+        }
+    }
+}

@@ -1,0 +1,95 @@
+.step__two {
+    width: 100%;
+
+    fieldset {
+        border: 0;
+        display: flex;
+        padding: 0px;
+        margin: 25px 0;
+        color: var(--secondary-color);
+        flex-wrap: wrap;
+    }
+
+    label {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        font-weight: bold;
+        font-size: 14px;
+        max-width: 300px;
+        margin: 0 35px 0 0;
+
+        @media (max-width: 880px) {
+            margin: 20px 10px 0 0;
+        }
+
+        &[for='track'] {
+            max-width: unset;
+            input {
+                &::-webkit-input-placeholder {
+                    transform: unset;
+                }
+            }
+        }
+
+        p {
+            display: flex;
+            svg {
+                margin: 0 0 0 10px;
+            }
+        }
+
+        div {
+            position: relative;
+        }
+    }
+
+    legend {
+        padding: 0 0 20px 0;
+
+        @media (max-width: 880px) {
+            padding: 0;
+        }
+    }
+
+    input {
+        font-family: var(--font-primary);
+        margin: 5px 0 0 0;
+        min-width: 300px;
+        width: 100%;
+        font-size: 16px;
+        letter-spacing: normal;
+        padding: 0 40px 0 10px;
+        border: 1px solid var(--grey-color);
+        height: 44px;
+        position: relative;
+        z-index: 1;
+        background: transparent;
+        cursor: pointer;
+
+        @media (max-width: 400px) {
+            min-width: 100%;
+        }
+    }
+
+    .counter {
+        color: var(--black);
+        font-size: 12px;
+        font-weight: 100;
+        position: absolute;
+        right: 0;
+        bottom: -20px;
+    }
+
+    .showMePass {
+        position: absolute;
+        right: 10px;
+        bottom: 10px;
+    }
+
+    .errors {
+        padding: 10px 0;
+        color: var(--red);
+    }
+}

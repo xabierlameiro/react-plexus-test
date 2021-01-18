@@ -1,0 +1,92 @@
+.header__breadcrumb {
+    width: 100%;
+    background-color: var(--grey-color);
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.23);
+    margin-bottom: 1px;
+
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+
+        .step {
+            box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.8);
+            position: relative;
+            background-color: var(--primary-color);
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            margin: 0 30px 0 0;
+            color: var(--white);
+            display: grid;
+            place-items: center;
+
+            &:last-of-type {
+                margin-right: 0;
+
+                &::before {
+                    background-color: var(--dark-grey-color);
+                }
+
+                &.step--select {
+                    &::before {
+                        background-color: var(--primary-color);
+                    }
+                }
+            }
+
+            &::before {
+                content: '';
+                transform: none;
+                width: 30px;
+                height: 3px;
+                background-color: var(--primary-color);
+                position: absolute;
+                left: -30px;
+                top: calc(50% - 1px);
+            }
+
+            &:first-of-type {
+                &::before {
+                    content: none;
+                }
+            }
+
+            &--select {
+                z-index: 1;
+                background: var(--secondary-color);
+                transform: scale(1.4);
+                position: relative;
+
+                &::before {
+                    transform: scale(0.55) translateX(11.5px);
+                }
+
+                &::after {
+                    content: '';
+                    width: 40px;
+                    height: 40px;
+                    background-color: var(--white);
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%, 30px) rotate(45deg);
+                    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.23);
+                }
+
+                & ~ * {
+                    background-color: var(--dark-grey-color);
+                    &::before {
+                        background-color: var(--dark-grey-color);
+                    }
+                }
+            }
+        }
+    }
+}
