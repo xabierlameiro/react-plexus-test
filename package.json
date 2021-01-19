@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@testing-library/jest-dom": "^5.11.9",
     "i18next": "^19.8.4",
     "i18next-browser-languagedetector": "^6.0.1",
     "node-sass": "^4.0.0",
@@ -29,6 +28,7 @@
     "test": "react-scripts test"
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.3",
     "@testing-library/react-hooks": "^5.0.0",
     "babel-plugin-transform-class-properties": "^6.24.1",

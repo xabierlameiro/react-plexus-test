@@ -4,12 +4,12 @@ import StepOne from '../components/StepOne'
 import StepTwo from '../components/StepTwo'
 import StepThree from '../components/StepThree'
 import { useTranslation } from 'react-i18next'
+import { useSelector } from 'react-redux'
 
 const Wizard = () => {
     const { t } = useTranslation()
     const childRef = useRef()
-
-    const validate = false
+    const { requestStatus } = useSelector((state) => state.app)
 
     return (
         <section className="page">
@@ -20,7 +20,7 @@ const Wizard = () => {
                     <StepThree
                         title={t('stepThree.title')}
                         nextButtonText={`${
-                            validate
+                            requestStatus === 200
                                 ? t('stepThree.buttonText1')
                                 : t('stepThree.buttonText2')
                         }`}
