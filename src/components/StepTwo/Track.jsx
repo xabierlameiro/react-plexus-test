@@ -26,10 +26,11 @@ const Track = ({ name, label, errors, register, placeholder, watch }) => {
                     })}
                     placeholder={placeholder}
                     type="text"
+                    data-testid={name}
                     id={name}
                     name={name}
                 />
-                <span className="counter">
+                <span className="counter" data-testid="counter">
                     {watch('track')?.length || 0}/255
                 </span>
             </div>

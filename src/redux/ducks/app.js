@@ -1,4 +1,4 @@
-import { call, all, takeLatest, put } from 'redux-saga/effects'
+import { call, all, takeLatest, put, select } from 'redux-saga/effects'
 import { submitForm } from '../../services/api'
 
 export const types = {
@@ -13,6 +13,7 @@ export const types = {
     VALIDATION_FORM_SUCCESS: 'VALIDATION_FORM_SUCCESS',
     LOADING_REQUEST: 'LOADING_REQUEST',
     SET_STATUS_REQUEST: 'SET_STATUS_REQUEST',
+    UPDATE_TOTAL_STEPS: 'UPDATE_TOTAL_STEPS',
 }
 
 export const initialAppState = {
@@ -35,6 +36,11 @@ export const changeWizardStepTo = (payload) => ({
 
 export const validationForm = (payload) => ({
     type: types.VALIDATION_FORM_REQUEST,
+    payload,
+})
+
+export const updateTotalSteops = (payload) => ({
+    type: types.UPDATE_TOTAL_STEPS,
     payload,
 })
 
@@ -64,7 +70,8 @@ function* validateFormSaga({ payload }) {
         yield put({ type: types.SET_STATUS_REQUEST, payload: status })
     } finally {
         yield put({ type: types.LOADING_REQUEST })
-        yield put({ type: types.CHANGE_STEP_SUCCESS, payload: 3 })
+        const { currentStep } = yield select((state) => state.app)
+        yield put({ type: types.CHANGE_STEP_SUCCESS, payload: currentStep + 1 })
     }
 }
 
@@ -82,6 +89,11 @@ export const appReducer = (state = initialAppState, { type, payload }) => {
             return {
                 ...state,
                 lopd: payload,
+            }
+        case types.UPDATE_TOTAL_STEPS:
+            return {
+                ...state,
+                totalSteps: payload,
             }
         case types.CHANGE_STEP_SUCCESS:
             return {

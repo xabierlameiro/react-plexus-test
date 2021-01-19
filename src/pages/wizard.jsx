@@ -1,16 +1,33 @@
+import { useRef } from 'react'
+import Switch from '../components/Switch'
 import StepOne from '../components/StepOne'
 import StepTwo from '../components/StepTwo'
 import StepThree from '../components/StepThree'
-import { useSelector } from 'react-redux'
+import { useTranslation } from 'react-i18next'
 
 const Wizard = () => {
-    const { currentStep } = useSelector((state) => state.app)
+    const { t } = useTranslation()
+    const childRef = useRef()
+
+    const validate = false
+
     return (
         <section className="page">
             <div className="container">
-                {currentStep === 1 && <StepOne />}
-                {currentStep === 2 && <StepTwo />}
-                {currentStep === 3 && <StepThree />}
+                <Switch>
+                    <StepOne title={t('stepOne.title')} />
+                    <StepTwo ref={childRef} title={t('stepTwo.title')} />
+                    <StepThree
+                        title={t('stepThree.title')}
+                        nextButtonText={`${
+                            validate
+                                ? t('stepThree.buttonText1')
+                                : t('stepThree.buttonText2')
+                        }`}
+                        prevButtonType="hidden"
+                        nextButtonType="terciary"
+                    />
+                </Switch>
             </div>
         </section>
     )

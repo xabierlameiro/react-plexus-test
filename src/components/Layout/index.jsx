@@ -11,8 +11,8 @@ import './index.scss'
 const Layout = ({
     title,
     children,
-    nextStep,
-    prevStep,
+    customPrev,
+    customNext,
     prevButtonType,
     nextButtonType,
     prevButtonText,
@@ -42,8 +42,8 @@ const Layout = ({
                     nextButtonText={nextButtonText}
                     prevButtonType={prevButtonType}
                     nextButtonType={nextButtonType}
-                    nextStep={nextStep}
-                    prevStep={prevStep}
+                    customNext={customNext}
+                    customPrev={customPrev}
                 />
             </footer>
         </>
@@ -53,8 +53,8 @@ const Layout = ({
 Layout.propTypes = {
     title: PropTypes.string,
     children: PropTypes.object,
-    nextStep: PropTypes.func,
-    prevStep: PropTypes.func,
+    customNext: PropTypes.func,
+    customPrev: PropTypes.func,
     prevButtonText: PropTypes.string,
     nextButtonText: PropTypes.string,
     prevButtonType: PropTypes.string,

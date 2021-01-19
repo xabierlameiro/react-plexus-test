@@ -1,12 +1,13 @@
 import PropTypes from 'prop-types'
 import Button from './Button'
+import useGotoStep from '../../hooks/useGoToStep'
 import { useTranslation } from 'react-i18next'
 import { MdNavigateNext } from 'react-icons/md'
 import { useSelector } from 'react-redux'
 
 const Controls = ({
-    prevStep,
-    nextStep,
+    customPrev,
+    customNext,
     prevButtonType,
     nextButtonType,
     prevButtonText,
@@ -14,17 +15,18 @@ const Controls = ({
 }) => {
     const { lopd } = useSelector((state) => state.app)
     const { t } = useTranslation()
+    const { prevStep, nextStep } = useGotoStep()
 
     return (
         <>
             <Button
-                handler={prevStep}
+                handler={customPrev || prevStep}
                 classes={prevButtonType}
                 text={prevButtonText || t('buttons.cancel')}
             />
 
             <Button
-                handler={nextStep}
+                handler={customNext || nextStep}
                 disabled={lopd}
                 classes={nextButtonType}
                 text={nextButtonText || t('buttons.next')}
@@ -34,8 +36,8 @@ const Controls = ({
     )
 }
 Controls.propTypes = {
-    nextStep: PropTypes.func,
-    prevStep: PropTypes.func,
+    customPrev: PropTypes.func,
+    customNext: PropTypes.func,
     prevButtonText: PropTypes.string,
     nextButtonText: PropTypes.string,
     prevButtonType: PropTypes.string,

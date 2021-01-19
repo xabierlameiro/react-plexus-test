@@ -4,7 +4,12 @@ import './button.scss'
 
 const Button = ({ classes, disabled = true, text, handler, icon }) => {
     return (
-        <button className={classes} onClick={handler} disabled={!disabled}>
+        <button
+            data-testid="button"
+            className={classes}
+            onClick={handler}
+            disabled={!disabled}
+        >
             {text}
             {icon}
         </button>
