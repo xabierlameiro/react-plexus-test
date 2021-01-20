@@ -26,7 +26,7 @@ const Layout = ({
             <header className="container__header">
                 <BreadCrumb classes="header__breadcrumb" />
                 <aside className="header__title">
-                    <h1>{title}</h1>
+                    <h1 data-testid="header__title">{title}</h1>
                 </aside>
             </header>
             <main className="container__body">
@@ -38,7 +38,7 @@ const Layout = ({
             </main>
             <footer className="container__footer">
                 <Controls
-                    prevButtonText={prevButtonType}
+                    prevButtonText={prevButtonText}
                     nextButtonText={nextButtonText}
                     prevButtonType={prevButtonType}
                     nextButtonType={nextButtonType}

@@ -31,6 +31,7 @@ const StepOne = () => {
             <div className="app__confirmation">
                 <label htmlFor="lopd">
                     <input
+                        data-testid="checkbox-lodp"
                         type="checkbox"
                         name="lopd"
                         id="lopd"

@@ -2,13 +2,13 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import './button.scss'
 
-const Button = ({ classes, disabled = true, text, handler, icon }) => {
+const Button = ({ classes, disabled = true, text, handler, icon, ...rest }) => {
     return (
         <button
-            data-testid="button"
             className={classes}
             onClick={handler}
             disabled={!disabled}
+            {...rest}
         >
             {text}
             {icon}

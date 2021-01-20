@@ -39,6 +39,7 @@ const Password = ({
                     })}
                     autoComplete="off"
                     placeholder={placeholder}
+                    data-testid={name}
                     name={name}
                     id={name}
                     type="password"

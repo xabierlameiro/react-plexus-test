@@ -4,10 +4,14 @@ import { AiOutlineCheck } from 'react-icons/ai'
 const Steps = ({ steps, active }) => {
     return Array.from(Array(steps), (_e, i) => {
         i += 1
+        const isSelected = i === active
+        const props = {
+            key: i,
+            className: `step${isSelected ? ' step--select' : ''}`,
+            ...(isSelected && { 'data-testid': 'step--select' }),
+        }
         return (
-            <li className={`step ${i === active && 'step--select'}`} key={i}>
-                {i < active ? <AiOutlineCheck size={12} /> : i}
-            </li>
+            <li {...props}>{i < active ? <AiOutlineCheck size={12} /> : i}</li>
         )
     })
 }

@@ -7,8 +7,8 @@ const Dialog = ({ img, title, message }) => {
             <div className="alert__description">
                 <img src={img} alt={title} />
                 <summary>
-                    <h2>{title}</h2>
-                    <p>{message}</p>
+                    <h2 data-testid="feedback-title">{title}</h2>
+                    <p data-testid="feedback-message">{message}</p>
                 </summary>
             </div>
         </dialog>

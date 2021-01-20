@@ -1,8 +1,5 @@
+import { cleanup, render } from 'test-utils'
 import Button from './Button'
-import '@testing-library/jest-dom/extend-expect'
-
-import { render, cleanup } from '@testing-library/react'
-
 import renderer from 'react-test-renderer'
 
 afterEach(cleanup)
@@ -13,13 +10,17 @@ it('renders without crashing', () => {
 })
 
 it('renders button correctly', () => {
-    const { getByTestId } = render(<Button text="Click me" />)
+    const { getByTestId } = render(
+        <Button data-testid="button" text="Click me" />
+    )
     expect(getByTestId('button')).toHaveTextContent('Click me')
 })
 
 it('matches snapshot', () => {
     const tree = renderer
-        .create(<Button classes="terciary" text="Click me" />)
+        .create(
+            <Button data-testid="button" classes="terciary" text="Click me" />
+        )
         .toJSON()
     expect(tree).toMatchSnapshot()
 })

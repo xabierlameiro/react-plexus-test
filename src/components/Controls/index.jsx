@@ -20,12 +20,14 @@ const Controls = ({
     return (
         <>
             <Button
+                data-testid="prev"
                 handler={customPrev || prevStep}
                 classes={prevButtonType}
                 text={prevButtonText || t('buttons.cancel')}
             />
 
             <Button
+                data-testid="next"
                 handler={customNext || nextStep}
                 disabled={lopd}
                 classes={nextButtonType}
