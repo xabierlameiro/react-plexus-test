@@ -1,31 +1,35 @@
 import Layout from '../Layout'
 import PropTypes from 'prop-types'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { updateTotalSteops } from '../../redux/ducks/app'
+import { updateTotalSteps } from '../../redux/ducks/app'
 
-const Swith = ({ children }) => {
+const Switch = ({ children }) => {
+    const { currentStep } = useSelector((state) => state.app)
+    const [customHandler, setCustomHanlder] = useState(null)
     const dispatch = useDispatch()
 
-    const { currentStep } = useSelector((state) => state.app)
-
-    const Component = children.filter(
+    const Component = children?.filter(
         (_child, index) => index + 1 === currentStep
     )[0]
 
     useEffect(() => {
-        dispatch(updateTotalSteops(children.length))
+        dispatch(updateTotalSteps(children.length))
+    }, [])
+
+    useEffect(() => {
+        setCustomHanlder(Component?.ref)
     }, [Component])
 
     return (
-        <Layout {...Component?.props} customNext={Component?.ref?.current}>
+        <Layout {...Component?.props} customNext={customHandler?.current}>
             <>{Component}</>
         </Layout>
     )
 }
 
-Swith.propTypes = {
-    children: PropTypes.array.isRequired,
+Switch.propTypes = {
+    children: PropTypes.array,
 }
 
-export default Swith
+export default Switch

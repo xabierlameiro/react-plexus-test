@@ -39,7 +39,7 @@ export const validationForm = (payload) => ({
     payload,
 })
 
-export const updateTotalSteops = (payload) => ({
+export const updateTotalSteps = (payload) => ({
     type: types.UPDATE_TOTAL_STEPS,
     payload,
 })
