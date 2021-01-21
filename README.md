@@ -10,22 +10,22 @@ _Dependencias_
 
 ```
 npm i
-
 ```
 
 _Ejecutar en modo desarrollo_
 
 ```
 npm run start
-
 ```
 
 _Ejecutar en modo producción_
 
 ```
 npm run build && server -s build
-
 ```
+
+_Una vez que la aplicación este corriendo en tu navegador haz click en la parte supior derecha donde dice "Ir a el Wizard"._
+
 
 ## Ejecución de las pruebas ⚙️
 
@@ -33,9 +33,7 @@ _Ejecutar en modo desarrollo_
 
 ```
 npm run test
-
 ```
-
 
 ## Construido con 🛠️
 
