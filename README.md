@@ -29,8 +29,6 @@ _Una vez que la aplicación este corriendo en tu navegador haz click en la parte
 
 ## Ejecución de las pruebas ⚙️
 
-_Ejecutar en modo desarrollo_
-
 ```
 npm run test
 ```
