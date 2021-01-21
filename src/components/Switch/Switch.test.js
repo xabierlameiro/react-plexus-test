@@ -28,9 +28,8 @@ test('Testing Switch component with the app steps and navigate between own steps
 
     const prevButton = screen.getByTestId('prev')
     const nextButton = screen.getByTestId('next')
-    const checkboxLodp = screen.getByTestId('checkbox-lodp')
 
-    fireEvent.click(checkboxLodp)
+    fireEvent.click(screen.getByTestId('checkbox-lodp'))
     fireEvent.click(nextButton)
 
     //debug()
@@ -57,6 +56,7 @@ test('Testing Switch component with the app steps and navigate between own steps
     expect(title).toHaveTextContent('My step one')
     expect(screen.getByTestId('step--select')).toHaveTextContent('1')
 
+    fireEvent.click(screen.getByTestId('checkbox-lodp'))
     fireEvent.click(nextButton)
 
     expect(title).toHaveTextContent('My step two')
