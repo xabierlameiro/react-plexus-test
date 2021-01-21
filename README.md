@@ -39,7 +39,7 @@ npm run test
 
 ## Construido con 🛠️
 
-_Las siguientes herramientas : _
+_Las siguientes herramientas :_
 
 
 * [React](https://es.reactjs.org/) - React!!!!
