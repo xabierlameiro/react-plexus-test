@@ -34,7 +34,7 @@ _Ejecutar en modo desarrollo_
 ```
 npm run test
 
-...
+```
 
 
 ## Construido con 🛠️
