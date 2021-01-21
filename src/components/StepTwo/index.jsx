@@ -35,6 +35,7 @@ const StepTwo = forwardRef((props, ref) => {
                         name="password"
                         register={register}
                         errors={errors}
+                        regexp={process.env.REACT_APP_REGEXP_PASS}
                     />
                     <Password
                         label={t('stepTwo.repeatPassword')}
@@ -42,6 +43,7 @@ const StepTwo = forwardRef((props, ref) => {
                         name="repeatPassword"
                         register={register}
                         errors={errors}
+                        regexp={process.env.REACT_APP_REGEXP_PASS}
                         extraValidations={{
                             validate: (value) =>
                                 value === password.current ||

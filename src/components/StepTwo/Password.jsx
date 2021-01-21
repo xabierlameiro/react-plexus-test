@@ -8,6 +8,7 @@ const Password = ({
     label,
     extraValidations,
     errors,
+    regexp,
     register,
     placeholder,
 }) => {
@@ -28,7 +29,7 @@ const Password = ({
                             message: t('stepTwo.maxLength'),
                         },
                         pattern: {
-                            value: /^(?=.*\d)(?=.*[A-Z])[a-zA-Z0-9!@#$%^&*)(, +=._-]{8,24}$/,
+                            value: new RegExp(regexp),
                             message: t('stepTwo.pattern'),
                         },
                         required: {
@@ -60,6 +61,7 @@ Password.propTypes = {
     label: PropTypes.string.isRequired,
     extraValidations: PropTypes.object,
     errors: PropTypes.object,
+    regexp: PropTypes.string.isRequired,
     register: PropTypes.func,
     placeholder: PropTypes.string,
 }

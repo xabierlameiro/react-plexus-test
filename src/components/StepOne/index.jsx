@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useDispatch, useSelector } from 'react-redux'
 import { changeLopdValue } from '../../redux/ducks/app'
@@ -9,6 +10,10 @@ const StepOne = () => {
     const dispatch = useDispatch()
     const { lopd } = useSelector((state) => state.app)
     const { t } = useTranslation()
+
+    useEffect(() => {
+        dispatch(changeLopdValue(false))
+    }, [])
 
     return (
         <section className="step__one">

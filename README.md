@@ -1,27 +1,57 @@
-In the project directory, you can run:
+# Wizard 🚀
 
-### `npm start`
+_Bienvenido al Wizard App para la generación de tu nueva contraseña._
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Instalación 🔧
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+_Sigue los siguientes pasos para poderlo en marcha._
 
-### `npm test`
+_Dependencias_
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```
+npm i
+
+```
+
+_Ejecutar en modo desarrollo_
+
+```
+npm run start
+
+```
+
+_Ejecutar en modo producción_
+
+```
+npm run build && server -s build
+
+```
+
+## Ejecución de las pruebas ⚙️
+
+_Ejecutar en modo desarrollo_
+
+```
+npm run test
+
+...
 
 
-## `IMPORTANTE`
-Si no es la primera vez que se ejecuta la aplicación, se recomienda borrar el storage de el navegador para asegurar su correcto funcionamiento.
+## Construido con 🛠️
 
-## `npm run build y serve -s build`
-Para ejecutar la versión de producción optimizada. 
+_Las siguientes herramientas : _
 
-El resultado de la prueba esta en la siguiente ruta
-http://localhost:5000/wizard
 
-EL enunciado de la misma en la raíz.
-http://localhost:5000/
+* [React](https://es.reactjs.org/) - React!!!!
+* [Redux](https://redux.js.org/tutorials/fundamentals/part-5-ui-react) - Gestor de estado
+* [Redux-sagas](https://redux-saga.js.org/) - Side-effects
+* [Sass](https://sass-lang.com/) - Estilos!
+* [React-icons](https://react-icons.github.io/react-icons/) - Iconografía
+* [i18next](https://react.i18next.com/legacy-v9/step-by-step-guide) - Internalización
+* [Eslint](https://prettier.io/) - Corrector
+* [Prettier](https://eslint.org/) - Formateo (Standar config)
+* [React-testing-library](https://testing-library.com/docs/react-testing-library/intro/) - Usado para testing
+
+
+---
+⌨️ con ❤️❤️❤️❤️❤️❤️ por xlameiro
