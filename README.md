@@ -41,6 +41,7 @@ _Las siguientes herramientas :_
 * [React](https://es.reactjs.org/) - React!!!!
 * [Redux](https://redux.js.org/tutorials/fundamentals/part-5-ui-react) - Gestor de estado
 * [Redux-sagas](https://redux-saga.js.org/) - Side-effects
+* [Redux-hook-form](https://react-hook-form.com/) - Formularios
 * [Sass](https://sass-lang.com/) - Estilos!
 * [React-icons](https://react-icons.github.io/react-icons/) - Iconografía
 * [i18next](https://react.i18next.com/legacy-v9/step-by-step-guide) - Internalización
