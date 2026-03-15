@@ -1,54 +1,25 @@
-# Wizard 🚀
+# React Plexus — Password Wizard
 
-_Bienvenido al Wizard App para la generación de tu nueva contraseña._
+An interactive React application featuring a step-by-step password generation
+wizard with animated [Plexus](https://github.com/VincentGarreau/particles.js) particle effects.
 
-### Instalación 🔧
+[![CI](https://github.com/xabierlameiro/react-plexus-test/actions/workflows/ci.yml/badge.svg)](https://github.com/xabierlameiro/react-plexus-test/actions/workflows/ci.yml)
 
-_Sigue los siguientes pasos para poderlo en marcha._
+## Features
 
-_Dependencias_
+- 🔒 Step-by-step password generation wizard
+- ✨ Animated Plexus particle background
+- 📱 Responsive layout
 
-```
-npm i
-```
+## Getting Started
 
-_Ejecutar en modo desarrollo_
-
-```
-npm run start
-```
-
-_Ejecutar en modo producción_
-
-```
-npm run build && server -s build
+```bash
+npm install
+npm start
 ```
 
-_Una vez que la aplicación este corriendo en tu navegador haz click en la parte supior derecha donde dice "Ir a el Wizard"._
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
+## License
 
-## Ejecución de las pruebas ⚙️
-
-```
-npm run test
-```
-
-## Construido con 🛠️
-
-_Las siguientes herramientas :_
-
-
-* [React](https://es.reactjs.org/) - React!!!!
-* [Redux](https://redux.js.org/tutorials/fundamentals/part-5-ui-react) - Gestor de estado
-* [Redux-sagas](https://redux-saga.js.org/) - Side-effects
-* [Redux-hook-form](https://react-hook-form.com/) - Formularios
-* [Sass](https://sass-lang.com/) - Estilos!
-* [React-icons](https://react-icons.github.io/react-icons/) - Iconografía
-* [i18next](https://react.i18next.com/legacy-v9/step-by-step-guide) - Internalización
-* [Eslint](https://prettier.io/) - Corrector
-* [Prettier](https://eslint.org/) - Formateo (Standar config)
-* [React-testing-library](https://testing-library.com/docs/react-testing-library/intro/) - Usado para testing
-
-
----
-⌨️ con ❤️❤️❤️❤️❤️❤️ por xlameiro
+MIT
